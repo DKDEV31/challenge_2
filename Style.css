@@ -2,4 +2,90 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Josefin Sans',sans-serif;
+    background: url(./images/bg-pattern-desktop.svg) ;
+    background-size: cover;
+    background-position: center;
+    font-size: 16px
+}
+main.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 375px;
+    margin:  50px auto;
+    background: white;
+    box-shadow: 1px 2px 15px 5px rgba(0,0,0,0.09);
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.title-wrapper{
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+.content-wrapper>h2{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 20px;
+    line-height: 25px;
+}
+.content-wrapper>h2>b{
+    font-weight: 100;
+    color: hsl(0, 36%, 70%);
+}
+.content-wrapper>p{
+    padding: 0 20px;
+    line-height: 25px;
+    color: hsl(0, 36%, 70%);
+    text-align: center;
+    font: 300;
+}
+
+.submit-wrapper{
+    margin: 20px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.no-border-large-input{
+    border: 1px solid ;
+    border-color: hsl(0, 36%, 70%);
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    background: white;
+    padding-left:  30px;
+}
+.no-border-large-input::placeholder{
+    color: hsl(0, 36%, 70%);
+
+}
+.no-border-large-input:focus{
+    outline: none;
+}
+.submit-button{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    height: 44px;
+    width: 60px;
+    right: -1px;
+    background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%)) ;
+}
+.submit-button:focus{
+    outline: none;
 }
