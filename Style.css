@@ -8,8 +8,8 @@ body{
     font-size: 16px
 }
 main.content{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     width: 375px;
     margin:  50px auto;
@@ -38,8 +38,8 @@ section{
 .content-wrapper>h2{
     text-align: center;
     letter-spacing: 10px;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 40px;
+    line-height: 45px;
 }
 .content-wrapper>h2>b{
     font-weight: 100;
@@ -65,10 +65,11 @@ section{
     border: 1px solid ;
     border-color: hsl(0, 36%, 70%);
     height: 40px;
-    width: 300px;
+    width: 235px;
     border-radius: 50px;
     background: white;
-    padding-left:  30px;
+    padding-right:  65px;
+    padding-left: 30px;
 }
 .no-border-large-input::placeholder{
     color: hsl(0, 36%, 70%);
@@ -88,4 +89,41 @@ section{
 }
 .submit-button:focus{
     outline: none;
+}
+
+@media screen and (min-width: 765px ){
+    main.content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: auto;
+        max-width: 1440px;
+        justify-content: center;
+    }   
+    img{
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0px;
+        height: auto;
+        width: 100%;
+    }
+    section{
+        grid-column: 1;
+        grid-row: 1;
+        margin: 70px 50px 70px 50px;
+    }
+    nav{
+        height: 63px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img-wrapper{
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 880px) and (min-width:765px){
+    img{
+        width: 430px;
+        height: 570px;
+    }
 }
