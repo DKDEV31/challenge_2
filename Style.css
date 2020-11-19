@@ -12,6 +12,7 @@ main.content{
     grid-template-columns: 1fr;
     justify-content: center;
     width: 375px;
+    height: 780px;
     margin:  50px auto;
     background: white;
     box-shadow: 1px 2px 15px 5px rgba(0,0,0,0.09);
@@ -30,6 +31,11 @@ section{
     align-items: center;
     justify-content: space-around;
     
+}
+.error-p{
+    color: hsl(0, 36%, 70%);
+    margin-bottom: 20px;
+    display: none;
 }
 .title-wrapper{
     letter-spacing: 10px;
@@ -54,7 +60,7 @@ section{
 }
 
 .submit-wrapper{
-    margin: 20px 0 50px 0;
+    margin: 10px 0 40px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,10 +71,10 @@ section{
     border: 1px solid ;
     border-color: hsl(0, 36%, 70%);
     height: 40px;
-    width: 235px;
+    width: 210px;
     border-radius: 50px;
     background: white;
-    padding-right:  65px;
+    padding-right:  70px;
     padding-left: 30px;
 }
 .no-border-large-input::placeholder{
@@ -90,19 +96,30 @@ section{
 .submit-button:focus{
     outline: none;
 }
+.submit-button:hover{
+    height: 50px;
+    width: 65px;
+    box-shadow: 2px 3px 24px -10px rgba(0,0,0,0.77);
+}
+.submit-wrapper>i{
+    color: red;
+    position: relative;
+    right: 65px;
+    top: 1px;
+    display: none;
+}
 
 @media screen and (min-width: 765px ){
     main.content{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
         width: auto;
         max-width: 1440px;
         justify-content: center;
+        height: auto;
     }   
     img{
         grid-column: 2;
-        grid-row: 1;
         margin: 0px;
         height: auto;
         width: 100%;
@@ -111,19 +128,45 @@ section{
         grid-column: 1;
         grid-row: 1;
         margin: 70px 50px 70px 50px;
+        height: 450px;
+        margin-top: 200px;
     }
     nav{
         height: 63px;
         grid-column: 1;
         grid-row: 1;
     }
-    .img-wrapper{
-        object-fit: cover;
+    .no-border-large-input{
+        width: 280px;
+        padding-right: 90px
     }
-}
-@media screen and (max-width: 880px) and (min-width:765px){
-    img{
-        width: 430px;
-        height: 570px;
+    .submit-button{
+        width: 80px;
+    }
+    .submit-button:hover{
+        height: 50px;
+        width: 85px;
+        box-shadow: 2px 3px 24px -10px rgba(0,0,0,0.77);
+    }
+    .submit-wrapper>i{
+        right: 85px
+    }
+    
+ }
+ @media screen and (max-width: 1056px) and (min-width:765px){
+    picture{
+        height: 692px;
+        width: 528px;
+    }
+    section{
+        height:400px;
+        margin-top: 170px;
+    }
+    main.content{
+        height: auto;
+        width: 938px;
+    }
+    .no-border-large-input{
+        width: 230px;
     }
 }
